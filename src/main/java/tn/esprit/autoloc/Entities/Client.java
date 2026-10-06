@@ -1,4 +1,4 @@
-package tn.esprit.autoloc.domain;
+package tn.esprit.autoloc.Entities;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,11 +12,14 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Maintenance {
+public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idMaintenance;
-    private LocalDate dateDebut;
-    private LocalDate dateFin;
-    private String description;
+    private Long idClient;
+    private String nom;
+    private String prenom;
+    private String email;
+    private String telephone;
+    private String numPermis;
+    private LocalDate dateInscription;
 }

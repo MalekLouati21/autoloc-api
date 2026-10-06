@@ -1,11 +1,10 @@
-package tn.esprit.autoloc.domain;
+package tn.esprit.autoloc.Entities;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.math.BigDecimal;
-import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -13,11 +12,12 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Contrat {
+public class Agence {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idContrat;
-    private LocalDate dateSignature;
-    private BigDecimal montantTotal;
-    private boolean valide;
+    private Long idAgence;
+    private String nom;
+    private String ville;
+    private String adresse;
+    private String telephone;
 }

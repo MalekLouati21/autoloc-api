@@ -1,4 +1,4 @@
-package tn.esprit.autoloc.domain;
+package tn.esprit.autoloc.Entities;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,12 +12,11 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Reservation {
+public class Maintenance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idReservation;
+    private Long idMaintenance;
     private LocalDate dateDebut;
     private LocalDate dateFin;
-    @Enumerated(EnumType.STRING)
-    private StatutReservation statut;
+    private String description;
 }
